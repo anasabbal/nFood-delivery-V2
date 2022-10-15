@@ -1,6 +1,7 @@
 package com.nas.consumerservice.model;
 
 
+import com.nas.common.Money;
 import com.nas.common.PersonName;
 import com.nas.consumerservice.command.ConsumerCommand;
 import com.nas.core.BaseEntity;
@@ -31,5 +32,8 @@ public class Consumer extends BaseEntity {
 
     public static ResultWithEvents<Consumer> create(final ConsumerCommand command){
         return new ResultWithEvents<>(new Consumer(command.getPersonName()), new ConsumerCreated());
+    }
+
+    public void validateOrderByConsumer(Money orderTotal) {
     }
 }

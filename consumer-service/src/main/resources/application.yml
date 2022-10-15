@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: consumer-service
+
+  profiles:
+    active: PostgresWal
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DATABASE_URL:jdbc:postgresql://${DOCKER_HOST_IP:localhost}/consumer}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+
+eventuatelocal:
+  kafka:
+    bootstrap:
+      servers: ${DOCKER_HOST_IP:localhost}:9092
+  zookeeper:
+    connection:
+      string: ${DOCKER_HOST_IP:localhost}:2181
