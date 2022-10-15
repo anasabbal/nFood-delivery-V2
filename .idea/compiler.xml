@@ -7,7 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="order-service" />
         <module name="common" />
+        <module name="account-service" />
         <module name="fd-core" />
       </profile>
       <profile name="Annotation profile for nFood-delivery-V2" enabled="true">

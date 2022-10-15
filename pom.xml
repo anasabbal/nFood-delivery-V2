@@ -12,6 +12,8 @@
         <module>consumer-service</module>
         <module>fd-core</module>
         <module>common</module>
+        <module>order-service</module>
+        <module>account-service</module>
     </modules>
 
     <properties>
