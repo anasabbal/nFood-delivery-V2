@@ -7,27 +7,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="order-service" />
-        <module name="common" />
-        <module name="account-service" />
-        <module name="fd-core" />
       </profile>
       <profile name="Annotation profile for nFood-delivery-V2" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.20/lombok-1.18.20.jar" />
         </processorPath>
+        <module name="order-service" />
+        <module name="common" />
+        <module name="account-service" />
         <module name="consumer-service" />
+        <module name="fd-core" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="consumer-service" options="-parameters -XDcompilePolicy=simple" />
+      <module name="account-service" options="-XDcompilePolicy=simple" />
+      <module name="common" options="-XDcompilePolicy=simple" />
+      <module name="consumer-service" options="-XDcompilePolicy=simple" />
+      <module name="fd-core" options="-XDcompilePolicy=simple" />
+      <module name="order-service" options="-XDcompilePolicy=simple" />
     </option>
   </component>
 </project>

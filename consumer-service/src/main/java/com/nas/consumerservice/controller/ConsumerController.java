@@ -22,7 +22,6 @@ public class ConsumerController {
     private final ConsumerService consumerService;
     private final ConsumerMapper consumerMapper;
 
-
     @RequestMapping(method = RequestMethod.POST)
     public ConsumerDTO create(@RequestBody final ConsumerCommand command){
         final ResultWithEvents<Consumer> consumerResultWithEvents = consumerService.create(command);
