@@ -1,6 +1,6 @@
 package com.nas.consumerservice.command;
 
-import com.nas.common.Money;
+
 import io.eventuate.tram.commands.common.Command;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -10,12 +10,12 @@ public class ValidateOrderByConsumer implements Command {
 
     private String consumerId;
     private String orderId;
-    private Money orderTotal;
+    private Object orderTotal;
 
     public ValidateOrderByConsumer() {
     }
 
-    public ValidateOrderByConsumer(String consumerId, String orderId, Money orderTotal) {
+    public ValidateOrderByConsumer(String consumerId, String orderId, Object orderTotal) {
         this.consumerId = consumerId;
         this.orderId = orderId;
         this.orderTotal = orderTotal;
@@ -52,11 +52,11 @@ public class ValidateOrderByConsumer implements Command {
         this.orderId = orderId;
     }
 
-    public Money getOrderTotal() {
+    public Object getOrderTotal() {
         return orderTotal;
     }
 
-    public void setOrderTotal(Money orderTotal) {
+    public void setOrderTotal(Object orderTotal) {
         this.orderTotal = orderTotal;
     }
 }

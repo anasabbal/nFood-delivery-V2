@@ -30,7 +30,7 @@ public class ConsumerServiceImpl implements ConsumerService{
 
 
     @Override
-    public void validateOrderForConsumer(String consumerId, Money orderTotal) {
+    public void validateOrderForConsumer(String consumerId, Object orderTotal) {
         Optional<Consumer> consumer = consumerRepository.findById(consumerId);
         consumer.orElseThrow(ConsumerNotFoundException::new).validateOrderByConsumer(orderTotal);
     }

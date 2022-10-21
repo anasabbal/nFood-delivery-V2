@@ -1,8 +1,5 @@
 package com.nas.consumerservice.model;
 
-
-import com.nas.common.Money;
-import com.nas.common.PersonName;
 import com.nas.consumerservice.command.ConsumerCommand;
 import com.nas.core.BaseEntity;
 import lombok.Getter;
@@ -20,13 +17,13 @@ public class Consumer extends BaseEntity {
 
 
     @Embedded
-    private PersonName personName;
+    private Object personName;
 
     public Consumer(){
 
     }
 
-    public Consumer(PersonName personName) {
+    public Consumer(Object personName) {
         this.personName = personName;
     }
 
@@ -34,6 +31,6 @@ public class Consumer extends BaseEntity {
         return new ResultWithEvents<>(new Consumer(command.getPersonName()), new ConsumerCreated());
     }
 
-    public void validateOrderByConsumer(Money orderTotal) {
+    public void validateOrderByConsumer(Object orderTotal) {
     }
 }

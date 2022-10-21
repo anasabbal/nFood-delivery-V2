@@ -23,7 +23,7 @@ public class ConsumerServiceCommandHandlers {
 
     }
 
-    public CommandHandlers commandHandlers() {
+    /*public CommandHandlers commandHandlers() {
         return SagaCommandHandlersBuilder
                 .fromChannel("consumerService")
                 .onMessage(ValidateOrderByConsumer.class, this::validateOrderForConsumer)
@@ -39,5 +39,5 @@ public class ConsumerServiceCommandHandlers {
         } catch (ConsumerNotFoundException e) {
             return withFailure();
         }
-    }
+    }*/
 }

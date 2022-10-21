@@ -1,17 +1,16 @@
 package com.nas.consumerservice.command;
 
 
-import com.nas.common.PersonName;
 import lombok.Getter;
 
 public class ConsumerCommand {
-    private PersonName personName;
+    private Object personName;
 
-    public PersonName getPersonName() {
+    public Object getPersonName() {
         return personName;
     }
 
-    public void setPersonName(PersonName personName) {
+    public void setPersonName(Object personName) {
         this.personName = personName;
     }
 }
