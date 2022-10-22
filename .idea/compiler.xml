@@ -17,11 +17,13 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
         </processorPath>
+        <module name="food-menu-service" />
+        <module name="food-item-service" />
+        <module name="fd-core" />
         <module name="order-service" />
         <module name="account-service" />
         <module name="eureka-server" />
         <module name="consumer-service" />
-        <module name="fd-core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -36,8 +38,10 @@
       <module name="consumer-service" options="-XDcompilePolicy=simple" />
       <module name="eureka-server" options="-XDcompilePolicy=simple" />
       <module name="fd-core" options="-XDcompilePolicy=simple" />
+      <module name="food-item-service" options="-XDcompilePolicy=simple" />
+      <module name="food-menu-service" options="-XDcompilePolicy=simple" />
       <module name="model-dto" options="-XDcompilePolicy=simple" />
-      <module name="nFood-delivery-V2" options="-XDcompilePolicy=simple" />
+      <module name="nFood-delivery-V2" options="" />
       <module name="order-service" options="-XDcompilePolicy=simple" />
     </option>
   </component>

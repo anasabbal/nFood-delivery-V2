@@ -14,6 +14,8 @@
         <module>order-service</module>
         <module>account-service</module>
         <module>eureka-server</module>
+        <module>food-item-service</module>
+        <module>food-menu-service</module>
     </modules>
 
     <properties>
