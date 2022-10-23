@@ -41,7 +41,7 @@
       <module name="food-item-service" options="-XDcompilePolicy=simple" />
       <module name="food-menu-service" options="-XDcompilePolicy=simple" />
       <module name="model-dto" options="-XDcompilePolicy=simple" />
-      <module name="nFood-delivery-V2" options="" />
+      <module name="nFood-delivery-V2" options="-XDcompilePolicy=simple" />
       <module name="order-service" options="-XDcompilePolicy=simple" />
     </option>
   </component>
