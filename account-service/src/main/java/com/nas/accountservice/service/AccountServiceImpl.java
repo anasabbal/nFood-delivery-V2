@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService{
 
-
     private final AccountRepository accountRepository;
     private final DomainEventPublisher domainEventPublisher;
 
